@@ -1,6 +1,6 @@
 # Outcome-First Agent Loop — Submission
 
-**Name:** Anand Pabbineedi · **Date:** 2026-11-08 · **Hours actually spent (be honest):** 14 hours · **Language / storage:** Python 3.10+ / SQLite (`controller_state.db`) + in-memory streaming accumulators
+**Name:** Anand Pabbineedi · **Date:** 2026-11-08 · **Hours spent:** 14 hours · **Language / storage:** Python 3.10+ / SQLite (`controller_state.db`) + in-memory streaming accumulators
 
 ---
 
