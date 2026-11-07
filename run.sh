@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-# Replace this with your controller. Contract: ./run.sh <SIM_URL> runs until the scenario finishes.
+# Outcome-first agent loop controller.
+# Usage: ./run.sh <SIM_URL> [--run-dir <dir>] [--tick <minutes>]
 set -euo pipefail
-SIM_URL="${1:?usage: ./run.sh <SIM_URL>}"
-echo "No controller yet — running the naive example against $SIM_URL" >&2
-exec python examples/naive_controller.py --url "$SIM_URL"
+
+SIM_URL="${1:?usage: ./run.sh <SIM_URL> [--run-dir <dir>] [--tick <minutes>]}"
+RUN_DIR="${2:-runs/controller}"
+TICK="${3:-60}"
+
+echo "Starting controller -> $SIM_URL  run-dir=$RUN_DIR  tick=${TICK}m" >&2
+exec python -m controller --url "$SIM_URL" --run-dir "$RUN_DIR" --tick "$TICK"
