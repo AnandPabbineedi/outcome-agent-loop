@@ -4,33 +4,38 @@
 
 | workflow | conclusion rate | Δ | pickup | Δ | engagement | Δ | engagement gap captured | hallucinated calls (base) |
 |---|---|---|---|---|---|---|---|---|
-| ks_cancel | 0.335 | +0.7% | 0.240 | +0.8% | 0.488 | -0.6% | -1% | 56 (47) |
-| nw_kyc | 0.380 | +4.6% | 0.238 | -1.7% | 0.624 | +5.7% | 31% | 23 (21) |
-| nw_renewal | 0.429 | +2.1% | 0.263 | -0.3% | 0.561 | +2.9% | 18% | 59 (42) |
-| ALL | 0.376 | +2.0% | 0.248 | -0.1% | 0.540 | +2.0% | 14% | 138 (110) |
+| ks_cancel | 0.348 | +4.5% | 0.243 | +2.2% | 0.496 | +1.1% | 0% | 56 (47) |
+| nw_kyc | 0.383 | +5.3% | 0.239 | -1.4% | 0.630 | +6.7% | 28% | 14 (21) |
+| nw_renewal | 0.423 | +0.7% | 0.262 | -0.5% | 0.559 | +2.5% | 18% | 41 (42) |
+| ALL | 0.380 | +3.2% | 0.249 | +0.5% | 0.544 | +2.7% | 13% | 111 (110) |
 
 ## Changes applied by the controller
 
-6 applied — beneficial: 4, neutral: 1, harmful: 1
+8 applied — beneficial: 5, harmful: 2, neutral: 1
 
 - ks_cancel v2 (controller_approved) dims=['voice'] engageΔ=+0.022 didΔ=+0.000 → **beneficial**
-- nw_renewal v2 (controller_approved) dims=['voice'] engageΔ=+0.002 didΔ=+0.000 → **neutral**
 - ks_cancel v3 (controller_approved) dims=['welcome_message'] engageΔ=-0.023 didΔ=+0.000 → **harmful**
+- nw_renewal v2 (controller_approved) dims=['voice'] engageΔ=+0.002 didΔ=+0.000 → **neutral**
 - nw_renewal v3 (controller_approved) dims=['welcome_message'] engageΔ=+0.066 didΔ=+0.000 → **beneficial**
 - nw_kyc v2 (controller_approved) dims=['voice'] engageΔ=+0.035 didΔ=+0.000 → **beneficial**
-- nw_kyc v3 (controller_approved) dims=['welcome_message'] engageΔ=+0.038 didΔ=+0.000 → **beneficial**
+- nw_kyc v3 (controller_approved) dims=['welcome_message'] engageΔ=+0.039 didΔ=+0.000 → **beneficial**
+- ks_cancel v4 (controller_approved) dims=['voice'] engageΔ=+0.062 didΔ=+0.000 → **beneficial**
+- ks_cancel v5 (controller_approved) dims=['voice'] engageΔ=-0.058 didΔ=+0.000 → **harmful**
 
 ## Governance
 
 ```
 {
-  "approval_requests": 6,
+  "approval_requests": 9,
   "decisions": {
-    "approved": 6,
+    "approved": 8,
+    "rejected": 1,
     "expired": 0
   },
-  "rejection_reasons": {},
-  "applied_via_approval": 6,
+  "rejection_reasons": {
+    "approver declined (judgement call)": 1
+  },
+  "applied_via_approval": 8,
   "auto_applied": 0,
   "auto_apply_rejected": 0,
   "apply_conflicts": 0,
@@ -54,11 +59,11 @@
 ```
 {
   "nw_renewal:welcome_message=W3": {
-    "3": 0.329,
-    "4": 0.346,
-    "5": 0.344,
-    "6": 0.351,
-    "7": 0.342
+    "3": 0.351,
+    "4": 0.338,
+    "5": 0.327,
+    "6": 0.341,
+    "7": 0.344
   }
 }
 ```

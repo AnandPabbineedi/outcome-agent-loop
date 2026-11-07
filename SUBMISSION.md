@@ -259,22 +259,22 @@ sqlite3 runs/mine02/controller_state.db "SELECT sim_ts, workflow_id, action, det
 ### public_01_dev
 | workflow | conclusion rate | Δ | pickup | Δ | engagement | Δ | engagement gap captured | hallucinated calls (base) |
 |---|---|---|---|---|---|---|---|---|
-| ks_cancel | 0.335 | +0.7% | 0.240 | +0.8% | 0.488 | -0.6% | -1% | 56 (47) |
-| nw_kyc | 0.380 | +4.6% | 0.238 | -1.7% | 0.624 | +5.7% | 31% | 23 (21) |
-| nw_renewal | 0.429 | +2.1% | 0.263 | -0.3% | 0.561 | +2.9% | 18% | 59 (42) |
-| **ALL** | **0.376** | **+2.0%** | **0.248** | **-0.1%** | **0.540** | **+2.0%** | **14%** | **138 (110)** |
+| ks_cancel | 0.348 | +4.5% | 0.243 | +2.2% | 0.496 | +1.1% | 0% | 56 (47) |
+| nw_kyc | 0.383 | +5.3% | 0.239 | -1.4% | 0.630 | +6.7% | 28% | 14 (21) |
+| nw_renewal | 0.423 | +0.7% | 0.262 | -0.5% | 0.559 | +2.5% | 18% | 41 (42) |
+| **ALL** | **0.380** | **+3.2%** | **0.249** | **+0.5%** | **0.544** | **+2.7%** | **13%** | **111 (110)** |
 
-*Governance:* 6 approval requests, 6 approved (100%), 0 lapsed, 0 conflicts. 4 beneficial, 1 neutral, 1 harmful. W3 decay arrested.
+*Governance:* 9 approval requests, 8 approved, 1 natural human judgment rejection, 0 lapsed, 0 conflicts. 5 beneficial, 1 neutral, 2 harmful (during exploration). W3 decay arrested.
 
 ### public_02_incidents
 | workflow | conclusion rate | Δ | pickup | Δ | engagement | Δ | engagement gap captured | hallucinated calls (base) |
 |---|---|---|---|---|---|---|---|---|
-| ks_cancel | 0.354 | **+43.0%** | 0.236 | **+28.6%** | 0.512 | **+7.5%** | **51%** | 101 (330) |
-| nw_kyc | 0.371 | -1.0% | 0.243 | +0.2% | 0.589 | -0.5% | -17% | 36 (31) |
-| nw_renewal | 0.425 | -0.4% | 0.264 | +0.9% | 0.540 | -1.5% | -12% | 56 (55) |
-| **ALL** | **0.381** | **+14.0%** | **0.247** | **+11.4%** | **0.537** | **+1.3%** | **24%** | **193 (416)** |
+| ks_cancel | 0.356 | **+44.0%** | 0.239 | **+30.2%** | 0.510 | **+7.0%** | **40%** | 115 (330) |
+| nw_kyc | 0.378 | +1.0% | 0.247 | +2.0% | 0.586 | -1.1% | -25% | 35 (31) |
+| nw_renewal | 0.420 | -1.4% | 0.262 | -0.1% | 0.542 | -1.1% | -14% | 55 (55) |
+| **ALL** | **0.382** | **+14.4%** | **0.248** | **+11.9%** | **0.536** | **+1.2%** | **16%** | **205 (416)** |
 
-*Incident Performance:* Flagged DID D2 dropped to 0% share; supervisor prompt edit resolved with MTTR 1470 min; hallucinated calls slashed from 330 to 101 (69% reduction); credits used: 5.
+*Incident Performance:* Flagged DID D2 dropped to 0% share; supervisor prompt edit resolved with MTTR 1440 min; hallucinated calls slashed from 330 to 115 (65% reduction); credits used: 5. 11/11 proposals approved (100%).
 
 ---
 
